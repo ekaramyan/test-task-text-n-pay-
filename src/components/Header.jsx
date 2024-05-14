@@ -1,19 +1,33 @@
-import { Box } from '@mui/material'
+import { Box, Container, Stack } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import MenuTab from './UI/MenuTab'
-
-const menuTabs = [{}, {}, {}]
+import { headerTabs } from '@/dataObjects'
+import logo from '@/assets/img/logo.svg'
 
 export default function Header() {
 	return (
-		<div style={{ position: 'fixed' }}>
-			<Box>
-				<Image />
-				{menuTabs.map((menuTab, index) => (
-					<MenuTab key={index} />
-				))}
-			</Box>
+		<div className='header'>
+			<Container fluid maxWidth='xxl' sx={{ padding: '0 135px !important' }}>
+				<Stack
+					direction='row'
+					justifyContent='space-between'
+					alignItems='center'
+				>
+					<Image
+						src={logo.src}
+						alt='logo'
+						width={237.5}
+						height={38}
+						className='header__icon'
+					/>
+					<Stack direction='row' spacing={3}>
+						{headerTabs.map(headerTab => (
+							<MenuTab key={headerTab.id} tab={headerTab} />
+						))}
+					</Stack>
+				</Stack>
+			</Container>
 		</div>
 	)
 }

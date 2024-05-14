@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@mui/material/styles'
 import Head from 'next/head'
-import '../style/reset.scss'
+import '@/app/globals.scss'
 import theme from '../Theme'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'

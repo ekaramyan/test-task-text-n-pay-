@@ -1,0 +1,19 @@
+.header {
+	position: fixed;
+	width: 100%;
+	padding: 1em 0;
+	transition: 0.3s all;
+	div {
+		color: #fff;
+	}
+	&:hover {
+		background: #fff;
+		button,
+		span {
+			color: #000;
+		}
+		.header__icon {
+			filter: brightness(0);
+		}
+	}
+}
