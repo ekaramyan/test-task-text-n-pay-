@@ -1,23 +1,62 @@
 .card {
-	&__transparent {
-		width: 100%;
-		height: 100%;
-		padding: 48px 24px 32px 24px;
-		background: rgba(255, 255, 255, 0.05);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 48px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 48px 24px 32px 24px;
+	border-radius: 24px;
+	transition: all 0.3s;
 
-		border-radius: 24px;
+	&__transparent {
+		gap: 48px;
+		background: rgba(255, 255, 255, 0.05);
 		border: 1px solid #ffffff;
 		backdrop-filter: blur(48px);
 		box-shadow: 0px 2px 6px 0px #00000066;
 		box-shadow: inset 0px 0px 32px 0px #0000000d;
-		transition: all 0.3s;
 		&:hover {
 			transform: translateY(-20px);
+		}
+	}
+	&__services {
+		position: relative;
+		width: 427px;
+		height: 591px;
+		&-dropdown {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 24px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			background: rgba(245, 245, 245, 1);
+			transform: translateY(87%);
+			transition: all 0.3s;
+		}
+		&:hover {
+			&::before {
+				content: ' ';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				transition: opacity 0.3s;
+				pointer-events: none;
+				z-index: 1;
+			}
+			.card__services-dropdown {
+				z-index: 2;
+				max-height: 70%;
+				transform: unset;
+			}
 		}
 	}
 }

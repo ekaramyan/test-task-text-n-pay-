@@ -1,14 +1,24 @@
 import HeadingBlock from '@/containers/HeadingBlock'
+import ServicesBlock from '@/containers/ServicesBlock'
 import StatsBlock from '@/containers/StatsBlock'
-import { Container } from '@mui/material'
+import { Box, Container } from '@mui/material'
 
 export default function index() {
 	return (
 		<>
 			<HeadingBlock />
-			<Container fluid maxWidth='xl'>
-				<StatsBlock />
-			</Container>
+			<Box
+				sx={{
+					borderRadius: '32px 32px 0 0',
+					background: '#fff',
+					marginTop: '-33px',
+				}}
+			>
+				<Container fluid maxWidth='xl'>
+					<StatsBlock />
+					<ServicesBlock />
+				</Container>
+			</Box>
 		</>
 	)
 }

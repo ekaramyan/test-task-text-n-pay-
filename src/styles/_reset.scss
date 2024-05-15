@@ -3,6 +3,9 @@
 *::after {
 	box-sizing: border-box;
 }
+html {
+	background: '#000';
+}
 * {
 	margin: 0;
 	scroll-behavior: smooth;

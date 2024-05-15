@@ -5,7 +5,7 @@ import { statsData } from '@/dataObjects'
 
 export default function StatsBlock() {
 	return (
-		<Box display='flex' justifyContent='center' p={10} gap={12}>
+		<Box display='flex' justifyContent='center' pt={15} gap={12}>
 			{statsData.map((item, index) => (
 				<Fragment key={item.id}>
 					<StatsItem count={item.count} comment={item.comment} />
