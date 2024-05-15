@@ -136,6 +136,7 @@ const theme = createTheme({
 				left: '50%',
 				top: 40,
 				transform: 'translateX(-50%)',
+				transition: 'all .3s',
 			},
 		},
 		services__card_comment: {
@@ -149,8 +150,8 @@ const theme = createTheme({
 })
 
 const responsiveTheme = responsiveFontSizes(theme, {
-	breakpoints: ['xs', 'sm', 'md'],
+	breakpoints: ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
 	factor: 3,
 })
 
-export default theme
+export default responsiveTheme

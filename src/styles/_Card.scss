@@ -37,7 +37,7 @@
 			justify-content: flex-start;
 			background: rgba(245, 245, 245, 1);
 			transform: translateY(87%);
-			transition: all 0.3s;
+			transition: all 0.5s;
 		}
 		&:hover {
 			&::before {
@@ -51,6 +51,10 @@
 				transition: opacity 0.3s;
 				pointer-events: none;
 				z-index: 1;
+			}
+			.MuiTypography-services__card_title::after {
+				width: 100%;
+				min-width: 350px;
 			}
 			.card__services-dropdown {
 				z-index: 2;
