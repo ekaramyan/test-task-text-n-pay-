@@ -1,6 +1,6 @@
 import MainWrapper from '@/components/MainWrapper'
 import SalesCard from '@/components/UI/Cards/SalesCard'
-import { servicesData as salesData } from '@/dataObjects'
+import { salesData } from '@/dataObjects'
 
 export default function SalesBlock() {
 	return (

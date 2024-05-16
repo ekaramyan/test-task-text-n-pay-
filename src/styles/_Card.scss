@@ -63,4 +63,32 @@
 			}
 		}
 	}
+	&__sales {
+		padding: 0;
+
+		&-top {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: rgba(245, 245, 245, 1);
+			padding: 18px 24px 10px 24px;
+		}
+		&-bottom {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+			background: #fff;
+			width: 100%;
+			padding: 10px 24px 24px 24px;
+		}
+		&-datepicker {
+			div {
+				border-radius: 8px;
+				input {
+					padding: 10px 0;
+				}
+			}
+		}
+	}
 }

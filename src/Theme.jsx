@@ -1,9 +1,31 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 
+const black = 'rgba(0, 0, 0, 0.85)'
+
 const theme = createTheme({
 	overrides: {
 		'*': {
 			scrollBehavior: 'smooth',
+		},
+		MuiMobileStepper: {
+			root: {
+				backgroundColor: 'white',
+			},
+			dots: {
+				backgroundColor: 'blue',
+			},
+			dot: {
+				width: 0,
+				height: 0,
+			},
+			progress: {
+				backgroundColor: 'green', // Изменение цвета прогресса
+			},
+			dotActive: {
+				backgroundColor: 'red', // Изменение цвета активной точки
+				width: 10, // Изменение размера активной точки
+				height: 10,
+			},
 		},
 	},
 	components: {
@@ -25,6 +47,31 @@ const theme = createTheme({
 					lineHeight: 1.25,
 					color: '#fff',
 					width: '100%',
+				},
+				card__sales_button: {
+					width: 32,
+					height: 32,
+					color: black,
+					cursor: 'pointer',
+				},
+			},
+		},
+		MuiMobileStepper: {
+			styleOverrides: {
+				root: {
+					// backgroundColor: 'white',
+				},
+				dot: {
+					width: 6,
+					height: 6,
+				},
+				dots: {
+					alignItems: 'center',
+					justifyContent: 'center',
+				},
+				dotActive: {
+					width: 10,
+					height: 10,
 				},
 			},
 		},
@@ -96,7 +143,7 @@ const theme = createTheme({
 			fontWeight: 700,
 			lineHeight: 1.25,
 			textAlign: 'center',
-			color: 'rgba(0, 0, 0, 0.85)',
+			color: black,
 			position: 'relative',
 			textTransform: 'uppercase',
 			'&:before': {
@@ -123,7 +170,7 @@ const theme = createTheme({
 			fontWeight: 700,
 			lineHeight: 1.25,
 			textAlign: 'center',
-			color: 'rgba(0, 0, 0, 0.85)',
+			color: black,
 			position: 'relative',
 			textTransform: 'uppercase',
 			margin: '20px 0',
@@ -146,6 +193,41 @@ const theme = createTheme({
 			lineHeight: 1.5,
 			textAlign: 'center',
 		},
+		sales__card_compare: {
+			color: black,
+			fontFamily: 'Verdana',
+			fontSize: 16,
+			fontWeight: 400,
+			lineHeight: 1.5,
+		},
+		sales__card_code: {
+			color: 'rgba(0, 19, 54, 1)',
+			fontFamily: 'Verdana',
+			fontSize: 20,
+			fontWeight: 400,
+			lineHeight: 1.4,
+		},
+		sales__card_exclusive: {
+			padding: '4px 16px 4px 16px',
+			background: 'rgba(255, 223, 115, 1)',
+			borderRadius: 7,
+			fontFamily: 'Arial',
+			fontSize: 12,
+			fontWeight: 400,
+			lineHeight: 1.25,
+			textTransform: 'uppercase',
+		},
+		sales__card_price: {
+			fontFamily: 'Verdana',
+			fontSize: 32,
+			fontWeight: 700,
+			lineHeight: 1.25,
+			textAlign: 'left',
+			color: 'rgba(0, 19, 54, 1)',
+		},
+		sales__card_currency: {},
+		sales__card_title: {},
+		sales__card_properties: {},
 	},
 })
 

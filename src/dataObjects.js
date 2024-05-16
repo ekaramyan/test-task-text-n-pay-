@@ -5,6 +5,9 @@ import sellICon from '@/assets/img/sellICon.svg'
 import services1 from '@/assets/img/services1.jpg'
 import services2 from '@/assets/img/services2.jpg'
 import services3 from '@/assets/img/services3.jpg'
+import sales1 from '@/assets/img/sales1.jpg'
+import sales2 from '@/assets/img/sales2.jpg'
+import sales3 from '@/assets/img/sales3.jpg'
 
 export const headerTabs = [
 	{ id: 0, title: 'Անշարժ գույք', link: '', subTabs: [] },
@@ -74,10 +77,10 @@ export const servicesData = [
 export const salesData = [
 	{
 		id: 0,
-		images: [services1.src],
+		images: [sales1.src, sales2.src, sales1.src],
 		title: 'Վարձով բնակարան Երևանում',
 		code: 266513,
-		pice: 523000,
+		price: 523000,
 		exclusive: true,
 		size: 44,
 		floor: 3,
@@ -85,10 +88,10 @@ export const salesData = [
 	},
 	{
 		id: 1,
-		images: [services1.src],
+		images: [sales2.src, sales3.src, sales1.src],
 		title: 'Վարձով բնակարան Երևանում',
 		code: 266513,
-		pice: 523000,
+		price: 523000,
 		exclusive: true,
 		size: 44,
 		floor: 3,
@@ -96,10 +99,10 @@ export const salesData = [
 	},
 	{
 		id: 2,
-		images: [services1.src],
+		images: [sales3.src, sales1.src, sales2.src],
 		title: 'Վարձով բնակարան Երևանում',
 		code: 266513,
-		pice: 523000,
+		price: 523000,
 		exclusive: true,
 		size: 44,
 		floor: 3,
