@@ -3,8 +3,9 @@ import Image from 'next/image'
 import { footerData } from '@/dataObjects'
 import logo from '@/assets/img/footer_logo.svg'
 import PropertiesList from './PropertiesList'
-import Link from 'next/link'
-import TabList from './TabList'
+import PropertyWithIcon from '@/components/UI/PropertyWithIcon'
+import FooterTab from '@/components/UI/FooterTab'
+import SocialLinkIcon from './UI/Icons/SocialLinkIcon'
 
 const { contacts, sales, rent } = footerData
 console.log(sales)
@@ -22,32 +23,37 @@ export default function Footer() {
 						<PropertiesList
 							title={contacts.title}
 							list={contacts.contactInfo}
+							variant={'contacts'}
+							renderItem={item => (
+								<PropertyWithIcon
+									title={item.title}
+									icon={item.icon}
+									variant='footer__properties'
+								/>
+							)}
 						/>
 						<Box display='flex' gap={4}>
 							{contacts.socials.map((social, index) => (
-								<Link
-									key={index}
-									href={social.link}
-									target='_blank'
-									style={{
-										border: '1px solid rgba(0, 19, 54, 0.65)',
-										borderRadius: '50%',
-										padding: 8,
-										maxWidth: 48,
-									}}
-								>
-									<Image
-										src={social.icon}
-										alt={social.link}
-										width={32}
-										height={32}
-									/>
-								</Link>
+								<SocialLinkIcon key={index} social={social} />
 							))}
 						</Box>
 					</Stack>
-					<TabList title={sales.title} list={sales.salesTabs} />
-					<TabList title={rent.title} list={rent.rentTabs} />
+					<PropertiesList
+						title={sales.title}
+						list={sales.salesTabs}
+						variant={'properties'}
+						renderItem={item => (
+							<FooterTab tab={item} variant='footer__properties' />
+						)}
+					/>
+					<PropertiesList
+						title={rent.title}
+						list={rent.rentTabs}
+						variant={'properties'}
+						renderItem={item => (
+							<FooterTab tab={item} variant='footer__properties' />
+						)}
+					/>
 				</Box>
 			</Container>
 		</footer>

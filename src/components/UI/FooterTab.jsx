@@ -7,7 +7,7 @@ export default function MenuTab({ tab, variant }) {
 				display: 'flex',
 				flexDirection: 'row',
 				alignItems: 'center',
-				justifyContent: 'center',
+				justifyContent: 'flex-start',
 				color: '#fff',
 			}}
 		>
