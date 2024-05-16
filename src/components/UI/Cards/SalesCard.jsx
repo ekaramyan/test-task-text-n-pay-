@@ -6,6 +6,10 @@ import dayjs from 'dayjs'
 import ImageSlider from '../ImageSlider'
 import scales from '@/assets/img/scales.svg'
 import Calendar from '../Icons/Calendar'
+import PropertyWithIcon from '../PropertyWithIcon'
+import sizeIcon from '@/assets/img/sizeIcon.svg'
+import roomIcon from '@/assets/img/roomIcon.svg'
+import floorIcon from '@/assets/img/floorIcon.svg'
 
 const OpenPickerIcon = styled(Calendar)({
 	backgroundColor: 'red',
@@ -37,19 +41,29 @@ export default function SalesCard({ card }) {
 					<Typography variant='sales__card_exclusive'>Էքսկլյուզիվ</Typography>
 				)}
 				<span>
-					<Typography variant='sales__card_price'>{card.price} </Typography>
+					<Typography variant='sales__card_price'>
+						{card.price.toLocaleString('de-DE')}{' '}
+					</Typography>
 					<Typography variant='sales__card_currency'> Դ.</Typography>
 				</span>
 				<Typography variant='sales__card_title'>{card.title}</Typography>
-				<Typography variant='sales__card_properties'>
-					Ընդ. մակերես {card.size} մ²
-				</Typography>
-				<Typography variant='sales__card_properties'>
-					Հարկ {card.floor}
-				</Typography>
-				<Typography variant='sales__card_properties'>
-					Սենյակներ {card.rooms}
-				</Typography>
+				<div className='card__sales-bottom-properties'>
+					<PropertyWithIcon
+						icon={sizeIcon.src}
+						title={`Ընդ. մակերես ${card.size} մ²`}
+						variant='sales__card_properties'
+					/>
+					<PropertyWithIcon
+						icon={floorIcon.src}
+						title={`Հարկ ${card.floor}`}
+						variant='sales__card_properties'
+					/>
+					<PropertyWithIcon
+						icon={roomIcon.src}
+						title={`Սենյակներ ${card.rooms}`}
+						variant='sales__card_properties'
+					/>
+				</div>
 				<Stack
 					direction='row'
 					justifyContent='space-between'
@@ -73,7 +87,7 @@ export default function SalesCard({ card }) {
 							}}
 						/>
 					</Box>
-					<Button variant='contained'>Դիտել</Button>
+					<Button variant='sales__card_button'>Դիտել</Button>
 				</Stack>
 			</Box>
 		</Card>

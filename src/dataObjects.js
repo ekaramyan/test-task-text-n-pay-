@@ -8,6 +8,13 @@ import services3 from '@/assets/img/services3.jpg'
 import sales1 from '@/assets/img/sales1.jpg'
 import sales2 from '@/assets/img/sales2.jpg'
 import sales3 from '@/assets/img/sales3.jpg'
+import geo from '@/assets/img/geo.svg'
+import phone from '@/assets/img/phone.svg'
+import viber from '@/assets/img/viber.svg'
+import whatsapp from '@/assets/img/whatsapp.svg'
+import instagram from '@/assets/img/instagram.svg'
+import facebook from '@/assets/img/facebook.svg'
+import youtube from '@/assets/img/youtube.svg'
 
 export const headerTabs = [
 	{ id: 0, title: 'Անշարժ գույք', link: '', subTabs: [] },
@@ -109,3 +116,75 @@ export const salesData = [
 		rooms: 2,
 	},
 ]
+
+export const footerData = {
+	contacts: {
+		title: 'ԱԿՑԵՌՆ ՀՈԼԴԻՆԳ',
+		contactInfo: [
+			{
+				icon: geo.src,
+				title: 'Հայաստան, 0012 Երևան, Վաղարշ Վաղարշյան փող․, 12 շենք',
+			},
+			{
+				icon: geo.src,
+				title: 'info@akcern.am',
+			},
+			{
+				icon: phone.src,
+				title: '+374 (10) 277-662',
+			},
+			{
+				icon: phone.src,
+				title: '+374 (91) 277-662',
+			},
+			{
+				icon: viber.src,
+				title: '+374 (96) 277-662',
+			},
+			{
+				icon: whatsapp.src,
+				title: '+374 (96) 277-662',
+			},
+		],
+
+		socials: [
+			{ icon: instagram.src, link: 'https://instagram.com' },
+			{ icon: facebook.src, link: 'https://facebook.com' },
+			{ icon: youtube.src, link: 'https://youtube.com' },
+		],
+	},
+	sales: {
+		title: 'Վաճառք',
+		salesTabs: [
+			{ id: 0, title: 'Բնակարան', link: '', subTabs: [] },
+			{ id: 1, title: 'Տուն', link: '', subTabs: [] },
+			{ id: 2, title: 'Առանձնատուն', link: '', subTabs: [] },
+			{ id: 3, title: 'Ամառանոց', link: '', subTabs: [] },
+			{ id: 4, title: 'Գրասենյակ', link: '', subTabs: [] },
+			{ id: 5, title: 'Ռեստորան', link: '', subTabs: [] },
+			{ id: 6, title: 'Խանութ ', link: '', subTabs: [] },
+			{ id: 7, title: 'Հողատարածք', link: '', subTabs: [] },
+			{ id: 8, title: 'Ավտոտեխսպասարկման կետ', link: '', subTabs: [] },
+			{ id: 9, title: 'Հյուրանոց', link: '', subTabs: [] },
+			{ id: 10, title: 'Վարսավիրանոց', link: '', subTabs: [] },
+			{ id: 11, title: 'Այլ', link: '', subTabs: [] },
+		],
+	},
+	rent: {
+		title: 'Վարձակալություն',
+		rentTabs: [
+			{ id: 0, title: 'Բնակարան', link: '', subTabs: [] },
+			{ id: 1, title: 'Տուն', link: '', subTabs: [] },
+			{ id: 2, title: 'Առանձնատուն', link: '', subTabs: [] },
+			{ id: 3, title: 'Ամառանոց', link: '', subTabs: [] },
+			{ id: 4, title: 'Գրասենյակ', link: '', subTabs: [] },
+			{ id: 5, title: 'Ռեստորան', link: '', subTabs: [] },
+			{ id: 6, title: 'Խանութ ', link: '', subTabs: [] },
+			{ id: 7, title: 'Հողատարածք', link: '', subTabs: [] },
+			{ id: 8, title: 'Ավտոտեխսպասարկման կետ', link: '', subTabs: [] },
+			{ id: 9, title: 'Հյուրանոց', link: '', subTabs: [] },
+			{ id: 10, title: 'Վարսավիրանոց', link: '', subTabs: [] },
+			{ id: 11, title: 'Այլ', link: '', subTabs: [] },
+		],
+	},
+}

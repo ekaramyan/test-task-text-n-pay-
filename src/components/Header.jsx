@@ -7,7 +7,7 @@ import logo from '@/assets/img/logo.svg'
 
 export default function Header() {
 	return (
-		<div className='header'>
+		<header className='header'>
 			<Container fluid maxWidth='xxl' sx={{ padding: '0 135px !important' }}>
 				<Stack
 					direction='row'
@@ -23,11 +23,11 @@ export default function Header() {
 					/>
 					<Stack direction='row' spacing={3}>
 						{headerTabs.map(headerTab => (
-							<MenuTab key={headerTab.id} tab={headerTab} />
+							<MenuTab key={headerTab.id} tab={headerTab} variant='menu' />
 						))}
 					</Stack>
 				</Stack>
 			</Container>
-		</div>
+		</header>
 	)
 }

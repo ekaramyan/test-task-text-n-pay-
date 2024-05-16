@@ -2,7 +2,7 @@ import { Button, Typography } from '@mui/material'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import Image from 'next/image'
 
-export default function MenuTab({ tab }) {
+export default function MenuTab({ tab, variant }) {
 	return (
 		<div
 			style={{
@@ -22,12 +22,12 @@ export default function MenuTab({ tab }) {
 					className='header__icon'
 				/>
 			) : (
-				<Button variant='menuTab' href={tab.link}>
+				<Button variant={`${variant}Tab`} href={tab.link}>
 					{tab?.title}
 				</Button>
 			)}
 			{tab?.subTabs && (
-				<Typography variant='menuTab'>
+				<Typography variant={`${variant}Tab`}>
 					<ArrowDropDownIcon />
 				</Typography>
 			)}
