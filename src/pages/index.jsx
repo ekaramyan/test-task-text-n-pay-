@@ -3,6 +3,7 @@ import ServicesBlock from '@/containers/ServicesBlock'
 import StatsBlock from '@/containers/StatsBlock'
 import SalesBlock from '@/containers/SalesBlock'
 import { Box, Container } from '@mui/material'
+import ScrollToTop from '@/components/UI/ScrollToTop'
 
 export default function index() {
 	return (
@@ -19,6 +20,7 @@ export default function index() {
 					<StatsBlock />
 					<ServicesBlock />
 					<SalesBlock />
+					<ScrollToTop/>
 				</Container>
 			</Box>
 		</>
